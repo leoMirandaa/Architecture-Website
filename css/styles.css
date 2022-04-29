@@ -240,3 +240,73 @@ img {
 .about-us p {
   margin-bottom: 1rem;
 }
+
+/* Models */
+.model {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  margin-bottom: 5rem;
+}
+
+.model:last-of-type {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .model {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.model-content {
+  padding: 5rem;
+  background-color: var(--white);
+}
+
+.basic {
+  background-image: url(../img/modelo_basico.jpg);
+}
+
+@media (min-width: 768px) {
+  .basic {
+    background-position: top right;
+  }
+
+  .basic .model-content {
+    grid-row: 2 / 3;
+    padding: 2rem 2rem 2rem 0;
+    border-radius: 50px
+  }
+}
+
+.premier {
+  background-image: url(../img//modelo_premier.jpg);
+}
+
+@media (min-width: 768px) {
+  .premier {
+    background-position: top left;
+  }
+
+  .premier .model-content {
+    grid-column: 2 / 3;
+    padding: 2rem;
+  }
+}
+
+.elite {
+  background-image: url(../img/modelo_elite.jpg);
+}
+
+@media (min-width: 768px) {
+  .elite {
+    background-position: top right
+  }
+
+  .elite .model-content {
+    /* grid-column: 2 / 3; */
+    padding: 2rem 2rem 2rem 0;
+  }
+}
